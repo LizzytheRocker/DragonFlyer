@@ -5,6 +5,7 @@ void GameEngine::initWindow(){
 	this->mainWindow = new sf::RenderWindow(sf::VideoMode(1024,780,desktop.bitsPerPixel), "Dragon Flyer",sf::Style::Close | sf::Style::Titlebar);
 }
 
+//Note: Probably will/should move shape out of this function when moving texture added to background
 void GameEngine::renderBackground(){
 	sf::ConvexShape ground;
 	//set size and location of ground shape and place it into the main window
