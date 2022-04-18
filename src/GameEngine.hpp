@@ -1,5 +1,7 @@
 #pragma once
 
+#include "DragonPlayer.hpp"
+
 class GameEngine
 {
 	private:
@@ -7,6 +9,9 @@ class GameEngine
 		sf::RenderWindow* mainWindow;
 
 		sf::Event ev;
+
+		DragonPlayer player;
+		
 
 		//Initalization of Game functions
 		//Sets the Main window settings and set the mainWindow pointer to the

@@ -47,5 +47,6 @@ void GameEngine::render()
 
 		this->mainWindow->clear(sf::Color(79,202,227));
 		this->renderBackground();
+		this->player.render(mainWindow);
 		this->mainWindow->display();
 }
