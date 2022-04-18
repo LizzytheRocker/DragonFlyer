@@ -39,13 +39,17 @@ bool GameEngine::running()const
 
 void GameEngine::render()
 {
-	while (this->mainWindow->pollEvent(this->ev))
+		this->mainWindow->clear(sf::Color(79,202,227));
+		this->renderBackground();
+		this->player.render(mainWindow);
+		this->mainWindow->display();
+}
+
+void GameEngine::update(){
+		while (this->mainWindow->pollEvent(this->ev))
 		{
 			if (ev.type == sf::Event::Closed)
 				this->mainWindow->close();
 		}
-
-		this->mainWindow->clear(sf::Color(79,202,227));
-		this->renderBackground();
-		this->mainWindow->display();
+		this->player.update(mainWindow);
 }
